@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Shop</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo">Shop Logo</a>
+            <ul class="nav-links">
+                <li><a class="a1" href="file:///C:/Users/kaleem/Desktop/poryfolio/home.html">Home</a></li>
+                <li><a class="a1" href="#">Shop</a></li>
+                <li><a class="a1" href="file:///C:/Users/kaleem/Desktop/poryfolio/about.html">About</a></li>
+                <li><a class="a1" href="file:///C:/Users/kaleem/Desktop/poryfolio/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for products...">
+        <button onclick="searchProducts()">Search</button>
+    </div>
+
+    <!-- Products Section -->
+    <div class="products" id="productList">
+        <!-- Fruits Category -->
+        <div class="product" data-name="apple">
+            <img src="images/apples-1952999_960_720.jpg" alt="Apple">
+            <h2>Apple</h2>
+            <p>$2 per kg</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="product" data-name="banana">
+            <img src="images/fruits-4728754_1280.jpg" alt="Banana">
+            <h2>Banana</h2>
+            <p>$1 per dozen</p>
+            <button>Shop Now</button>
+        </div>
+        
+        <!-- Vegetables Category -->
+        <div class="product" data-name="potato">
+            <img src="images/potato-2760712_1280.jpg" alt="Potato">
+            <h2>Potato</h2>
+            <p>$1 per kg</p>
+            <br>
+            <p class="p1">- 10%off</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="product" data-name="carrot">
+            <img src="images/carrot.jpg" alt="Carrot">
+            <h2>Carrot</h2>
+            <p>$1.5 per kg</p>
+            <button>Shop Now</button>
+        </div>
+
+        <!-- Electronics Category -->
+        <div class="product" data-name="smartphone">
+            <img src="images/mobile.jpg" alt="Smartphone">
+            <h2>Smartphone</h2>
+            <p>$500</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="product" data-name="laptop">
+            <img src="images/laptop-1846277_1280.jpg" alt="Laptop">
+            <h2>Laptop</h2>
+            <p>$1000</p>
+            <button>Shop Now</button>
+        </div>
+
+        <!-- Clothing Category -->
+        <div class="product" data-name="tshirt">
+            <img src="images/t-shirt.jpg" alt="T-shirt">
+            <h2>T-Shirt</h2>
+            <p>$15</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="product" data-name="jacket">
+            <img src="images/suit-714357_1280.jpg" alt="Jacket">
+            <h2>Jacket</h2>
+            <p>$50</p>
+            <button>Shop Now</button>
+        </div>
+        
+        <!-- Home Appliances -->
+        <div class="product" data-name="refrigerator">
+            <img src="images/images.jfif" alt="Refrigerator">
+            <h2>Refrigerator</h2>
+            <p>$800</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="product" data-name="microwave">
+            <img src="images/micro.jpg" alt="Microwave">
+            <h2>Microwave</h2>
+            <p>$120</p>
+            <button>Shop Now</button>
+        </div>
+    </div>
+
+  <!-- Footer Section Start -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 My E-commerce Website. All Rights Reserved.</p>
+      <ul class="social-links">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </footer>
+  <!-- Footer Section End -->
+
+    <!-- JavaScript -->
+    <script>
+        function searchProducts() {
+            let searchQuery = document.getElementById('searchInput').value.toLowerCase();
+            let products = document.querySelectorAll('.product');
+            products.forEach(product => {
+                let productName = product.getAttribute('data-name');
+                if (productName.includes(searchQuery)) {
+                    product.style.display = "block";
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

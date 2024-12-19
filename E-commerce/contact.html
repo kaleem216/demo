@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contack.css">
+</head>
+<body>
+ <!-- Header Section Start -->
+ <header>
+    <div class="logo">MyLogo</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a class="a1" href="#">Home</a></li>
+        <li><a class="a1" href="file:///C:/Users/kaleem/Desktop/poryfolio/shop.html# ">Shop</a></li>
+        <li><a class="a1" href="file:///C:/Users/kaleem/Desktop/poryfolio/about.html">About</a></li>
+        <li><a class="a1" href="#">Contact</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+
+
+    <div class="contact-container">
+        <!-- Email -->
+        <div class="contact-info">
+            <h3>Email</h3>
+            <p>info@yourwebsite.com</p>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="contact-info">
+            <h3>Phone</h3>
+            <p>(123) 456-7890</p>
+        </div>
+
+        <!-- Physical Address -->
+        <div class="contact-info">
+            <h3>Address</h3>
+            <p>123 Main Street, Your City, Your Country</p>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+            <a href="#" class="social-icon" id="facebook">
+                <img src="images/facebook-2815970_1280.jpg" alt="Facebook">
+            </a>
+            <a href="#" class="social-icon" id="twitter">
+                <img src="images/twitter-2815914_1280.jpg" alt="Twitter">
+            </a>
+            <a href="#" class="social-icon" id="instagram">
+                <img src="images/insta.webp" alt="Instagram">
+            </a>
+            <a href="#" class="social-icon" id="linkedin">
+                <img src="images/linkedin-2815969_1280.jpg" alt="LinkedIn">
+            </a>
+        </div>
+    </div>
+
+     <!-- Footer Section Start -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 My E-commerce Website. All Rights Reserved.</p>
+      <ul class="social-links">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </footer>
+  <!-- Footer Section End -->
+
+
+
+
+    <script>
+        // JavaScript to show message when clicking on social media icons
+        document.addEventListener("DOMContentLoaded", function() {
+            // Select all social media links
+            const socialIcons = document.querySelectorAll('.social-icon');
+            
+            // Message to show when clicked
+            const message = "This is a portfolio website, no links are available here.";
+            
+            // Add click event listener to each social media link
+            socialIcons.forEach(icon => {
+                icon.addEventListener('click', function(event) {
+                    alert(message); // Show the message when clicked
+                });
+            });
+        });
+    </script>
+</body>
+</html>
